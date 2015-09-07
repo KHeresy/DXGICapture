@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "DXGIManager.h"
+#include <memory>
 #include <gdiplus.h>
 
 using namespace Gdiplus;
