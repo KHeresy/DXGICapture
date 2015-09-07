@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXGICapture", "DXGICapture\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXGICaptureSample", "Sample\DXGICaptureSample.vcxproj", "{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCVTest", "OpenCVTest\OpenCVTest.vcxproj", "{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,14 @@ Global
 		{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}.Release|Win32.Build.0 = Release|Win32
 		{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}.Release|x64.ActiveCfg = Release|x64
 		{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}.Release|x64.Build.0 = Release|x64
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Debug|Win32.Build.0 = Debug|Win32
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Debug|x64.ActiveCfg = Debug|x64
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Debug|x64.Build.0 = Debug|x64
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Release|Win32.ActiveCfg = Release|Win32
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Release|Win32.Build.0 = Release|Win32
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Release|x64.ActiveCfg = Release|x64
+		{9BB9D604-7E92-4A5D-A879-7752C1D9EFC1}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
