@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXGICapture", "DXGICapture\DXGICapture.vcxproj", "{3B9EF501-CD0D-462D-AC88-D26B4BB6F7EF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXGICaptureSample", "DXGICapture\DXGICaptureSample.vcxproj", "{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXGICaptureSample", "Sample\DXGICaptureSample.vcxproj", "{7456BCB4-72FD-49AC-93DB-FE372F11DCDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

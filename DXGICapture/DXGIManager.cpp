@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "DXGIManager.h"
 #include <memory>
 #include <gdiplus.h>
@@ -67,7 +66,8 @@ HRESULT DXGIOutputDuplication::AcquireNextFrame(IDXGISurface1** pDXGISurface, DX
 	HRESULT hr = m_DXGIOutputDuplication->AcquireNextFrame(20, &fi, &spDXGIResource);
 	if(FAILED(hr))
 	{
-		__L_INFO("m_DXGIOutputDuplication->AcquireNextFrame failed with hr=0x%08x", hr);
+		// TODO : Change log method
+		// __L_INFO("m_DXGIOutputDuplication->AcquireNextFrame failed with hr=0x%08x", hr);
 		return hr;
 	}
 
@@ -118,7 +118,8 @@ HRESULT DXGIOutputDuplication::AcquireNextFrame(IDXGISurface1** pDXGISurface, DX
 
 		if(hr == S_OK)
 		{
-			__L_INFO("PointerPosition Visible=%d x=%d y=%d w=%d h=%d type=%d\n", fi.PointerPosition.Visible, fi.PointerPosition.Position.x, fi.PointerPosition.Position.y, psi.Width, psi.Height, psi.Type);
+			// TODO : Change log method
+			// __L_INFO("PointerPosition Visible=%d x=%d y=%d w=%d h=%d type=%d\n", fi.PointerPosition.Visible, fi.PointerPosition.Position.x, fi.PointerPosition.Position.y, psi.Width, psi.Height, psi.Type);
 
 			if((psi.Type == DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME ||
 			    psi.Type == DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR ||
@@ -224,7 +225,8 @@ HRESULT DXGIManager::Init()
 	HRESULT hr = CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void**)(&m_spDXGIFactory1) );
 	if( FAILED(hr) )
 	{
-		__L_ERROR("Failed to CreateDXGIFactory1 hr=%08x", hr);
+		// TODO : Change log method
+		// __L_ERROR("Failed to CreateDXGIFactory1 hr=%08x", hr);
 		return hr;
 	}
 
@@ -251,14 +253,15 @@ HRESULT DXGIManager::Init()
 			DXGI_OUTPUT_DESC outputDesc;
 			spDXGIOutput->GetDesc(&outputDesc);
 
-			__L_INFO("Display output found. DeviceName=%ls  AttachedToDesktop=%d Rotation=%d DesktopCoordinates={(%d,%d),(%d,%d)}", 
-				outputDesc.DeviceName, 
-				outputDesc.AttachedToDesktop, 
-				outputDesc.Rotation, 
-				outputDesc.DesktopCoordinates.left, 
-				outputDesc.DesktopCoordinates.top, 
-				outputDesc.DesktopCoordinates.right, 
-				outputDesc.DesktopCoordinates.bottom);
+			// TODO : Change log method
+			// __L_INFO("Display output found. DeviceName=%ls  AttachedToDesktop=%d Rotation=%d DesktopCoordinates={(%d,%d),(%d,%d)}", 
+			//	outputDesc.DeviceName, 
+			//	outputDesc.AttachedToDesktop, 
+			//	outputDesc.Rotation, 
+			//	outputDesc.DesktopCoordinates.left, 
+			//	outputDesc.DesktopCoordinates.top, 
+			//	outputDesc.DesktopCoordinates.right, 
+			//	outputDesc.DesktopCoordinates.bottom);
 
 			if(outputDesc.AttachedToDesktop)
 			{
@@ -278,7 +281,8 @@ HRESULT DXGIManager::Init()
 		hr = D3D11CreateDevice((*AdapterIter), D3D_DRIVER_TYPE_UNKNOWN, NULL, 0, NULL, 0, D3D11_SDK_VERSION, &spD3D11Device, &fl, &spD3D11DeviceContext);
 		if( FAILED(hr) )
 		{
-			__L_ERROR("Failed to create D3D11CreateDevice hr=%08x", hr);
+			// TODO : Change log method
+			// __L_ERROR("Failed to create D3D11CreateDevice hr=%08x", hr);
 			return hr;
 		}
 
@@ -308,7 +312,8 @@ HRESULT DXGIManager::Init()
 	hr = m_spWICFactory.CoCreateInstance(CLSID_WICImagingFactory);
 	if( FAILED(hr) )
 	{
-		__L_ERROR("Failed to create WICImagingFactory hr=%08x", hr);
+		// TODO : Change log method
+		// __L_ERROR("Failed to create WICImagingFactory hr=%08x", hr);
 		return hr;
 	}
 
