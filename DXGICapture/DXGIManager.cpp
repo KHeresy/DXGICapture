@@ -4,6 +4,7 @@
 
 using namespace Gdiplus;
 
+#pragma region Functions of DXGIPointerInfo
 DXGIPointerInfo::DXGIPointerInfo(BYTE* pPointerShape, UINT uiPointerShapeBufSize, DXGI_OUTDUPL_FRAME_INFO fi, DXGI_OUTDUPL_POINTER_SHAPE_INFO psi)
 	:	m_pPointerShape(pPointerShape),
 		m_uiPointerShapeBufSize(uiPointerShapeBufSize),
@@ -39,7 +40,9 @@ DXGI_OUTDUPL_POINTER_SHAPE_INFO& DXGIPointerInfo::GetShapeInfo()
 {
 	return m_PSI;
 }
+#pragma endregion
 
+#pragma region Functions of DXGIOutputDuplication
 DXGIOutputDuplication::DXGIOutputDuplication(IDXGIAdapter1* pAdapter,
 	ID3D11Device* pD3DDevice,
 	ID3D11DeviceContext* pD3DDeviceContext,
@@ -176,7 +179,9 @@ bool DXGIOutputDuplication::IsPrimary()
 	}
 	return false;
 }
+#pragma endregion
 
+#pragma region Functions of DXGIManager
 DXGIManager::DXGIManager()
 {
 	m_CaptureSource = CSUndefined;
@@ -709,3 +714,4 @@ int DXGIManager::GetMonitorCount()
         return Count;
     return -1;
 }
+#pragma endregion

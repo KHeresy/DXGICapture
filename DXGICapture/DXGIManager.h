@@ -10,8 +10,6 @@
 
 using namespace std;
 
-class DXGIPointerInfo;
-
 enum CaptureSource
 {
 	CSUndefined,
@@ -70,11 +68,13 @@ public:
 
 	HRESULT GetOutputRect(RECT& rc);
 	HRESULT GetOutputBits(BYTE* pBits, RECT& rcDest);
+
 private:
 	HRESULT Init();
 	int GetMonitorCount();
 	vector<DXGIOutputDuplication> GetOutputDuplication();
 	void DrawMousePointer(BYTE* pDesktopBits, RECT rcDesktop, RECT rcDest);
+
 private:
 	CComPtr<IDXGIFactory1> m_spDXGIFactory1;
 	vector<DXGIOutputDuplication> m_vOutputs;
